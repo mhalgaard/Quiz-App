@@ -1,0 +1,52 @@
+﻿* {
+    box-sizing:border-box;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+h1 {
+    font-size:24px;
+    font-weight:bold;
+    text-align:center;
+}
+
+h2 {
+    font-size:20px;
+    font-weight:bold;
+}
+
+p {
+    font-size:16px;
+}
+
+#content {
+    width:980px;
+    margin:0 auto;
+}
+
+#quizzes {
+    display:flex;
+    flex-direction:row;
+    justify-content:space-between;
+    flex-wrap:wrap;
+}
+
+#quizzes div {
+    text-align:center;
+    flex-grow:1;
+    flex-basis:33%;
+}
+
+.btn-quiz {
+    padding: 5px 15px;
+    border: 2px solid #7891c5;
+    border-radius: 5px;
+    color: #fff;
+    text-decoration: none;
+    background-color: #5a6d96;
+    display:inline-block;
+    transition:.2s linear all;
+}
+
+.btn-quiz:hover {
+    filter: brightness(1.1);
+}

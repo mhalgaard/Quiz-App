@@ -1,0 +1,15 @@
+﻿@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Welcome to Quiz World</h1>
+<section id="quizzes">
+    @foreach (Quiz quiz in ViewData["Quizzes"] as IList<Quiz>)
+    {
+        <div class="quiz-@quiz.QuizID">
+            <h2>@quiz.Title</h2>
+            <p>@quiz.Description</p>
+            <a class="btn-quiz" asp-action="Index" asp-controller="Quiz" asp-route-id="@quiz.QuizID">Take Quiz</a>
+        </div>
+    }
+</section>

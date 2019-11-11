@@ -1,0 +1,26 @@
+﻿@model Quiz
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Quizzes</h1>
+
+@Model.QuizID
+
+<h2>@Model.Title</h2>
+<p>@Model.Description</p>
+
+<form asp-action="Index" asp-controller="Quiz">
+    @foreach (var question in Model.Questions)
+    {
+        <label>@question.Title</label>
+        <select>
+            @foreach (var option in question.Options)
+            {
+                <option value="@option.OptionID">@option.OptionText</option>
+            }
+        </select>
+    }
+    <input type="submit" value="Send svar" />
+</form>
